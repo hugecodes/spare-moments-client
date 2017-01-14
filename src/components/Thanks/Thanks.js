@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import './Thanks.css';
 
 import Note from '../../assets/notes.png';
+import Rocket from '../../assets/rocket.png';
+import Alarm from '../../assets/alarmclock.png';
 
 class Thanks extends Component {
 
@@ -15,7 +17,6 @@ class Thanks extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="Thanks">
         <div className="wrapper Thanks__content">
@@ -25,15 +26,15 @@ class Thanks extends Component {
           </div>
           <div className="Thanks__scrollArea">
             <div className="Thanks__scrollComment">
-              <img src="#" alt=""/>
+              <img src={Alarm} alt=""/>
               Punctuality
             </div>
             <div className="Thanks__scrollComment">
-              <img src="#" alt=""/>
+              <img src={Rocket} alt=""/>
               Friendly
             </div>
             <div className="Thanks__scrollComment">
-              <img src="#" alt=""/>
+              <img src={Alarm} alt=""/>
               Learned new stuff
             </div>
           </div>

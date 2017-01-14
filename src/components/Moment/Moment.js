@@ -49,10 +49,10 @@ class Moment extends Component {
           <div className="Moment__wrapper">
             <p>{ this.state.moment.name } needs help with</p>
             <p className="Moment__large">{ this.state.moment.title }</p>
-            <p className="Moment__about">{ this.state.moment.name }</p>
+            <p className="Moment__about">About { this.state.moment.name }</p>
             <p className="Moment__copy">{ this.state.moment.description }</p>
             <p className="Moment__about">Proximity</p>
-            <p className="Moment__light">5 min</p>
+            <p className="Moment__light">5 minutes</p>
           </div>
           <button onClick={ this.handleNavigate } className="button--bottom">Help { this.state.moment.name }</button>
         </div>

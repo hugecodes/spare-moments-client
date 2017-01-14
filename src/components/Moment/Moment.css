@@ -21,6 +21,13 @@
 
 .Moment__wrapper {
   padding: 0 40px;
+  flex: 1 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .Moment__large {
@@ -31,8 +38,19 @@
 
 .Moment__copy {
   font-weight: 300;
+  font-size: 2.6rem;
+  line-height: 1.7;
+}
+
+.Moment__about {
+  margin-top: 5rem;
 }
 
 .Moment__about, .Moment__large {
   font-weight: bold;
+}
+
+.Moment__wrapper .Moment__light {
+  margin-top: 0;
+  margin-bottom: 5rem;
 }

@@ -62,3 +62,7 @@ p {
 .input__text:focus {
   outline: 0;
 }
+
+.orange {
+  color: #FF8144;
+}

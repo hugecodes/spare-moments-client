@@ -14,7 +14,6 @@ class Success extends Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.moments.length === 0) {
       return ( <div>Loading</div> );
     } else {
