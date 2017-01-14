@@ -30,7 +30,7 @@ class Skills extends Component {
   }
 
   handleRegister() {
-    axios.post('http://localhost:8080/api/users', {
+    axios.post('http://ec2-54-226-161-164.compute-1.amazonaws.com:8080/api/users', {
       name: this.props.userName,
       profilePic: this.props.profilePic,
       skills: this.props.skills

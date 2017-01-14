@@ -10,7 +10,7 @@ import './App.css';
 class App extends Component {
 
   componentWillMount() {
-    axios.get('http://localhost:8080/api/moments')
+    axios.get('http://ec2-54-226-161-164.compute-1.amazonaws.com:8080/api/moments')
       .then((res) => {
         this.props.getMoments(res.data);
       });
