@@ -1,5 +1,8 @@
+.body--App {
+  background-color: #2CA3E9;
+}
+
 .App {
-  background-image: linear-gradient(135deg, #7037CB, #DD5E89);
   padding-top: 14rem;
 }
 

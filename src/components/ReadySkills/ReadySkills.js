@@ -15,11 +15,11 @@ class ReadySkills extends Component {
     this.handleActiveSkillUpdate = this.handleActiveSkillUpdate.bind(this);
   }
 
-  componentWillMount() {
-    if (this.props.moments.length === 0) {
-      this.props.router.push('/');
-    }
-  }
+  // componentWillMount() {
+  //   if (this.props.moments.length === 0) {
+  //     this.props.router.push('/');
+  //   }
+  // }
 
   handleActiveSkillUpdate(e) {
     this.props.updateActiveSkill(e.target.value);
@@ -28,8 +28,12 @@ class ReadySkills extends Component {
   renderSkills() {
     return this.props.skills.map((skill) => {
       return (
-        <div className="inputBlock" key={skill}>
-          <label htmlFor={skill}>{skill}</label>
+        <div className="ReadySkills__inputBlock" key={skill}>
+          <label htmlFor={skill}>
+            <div className="ReadySkills__inputimage">
+            </div>
+            {skill}
+          </label>
           <input type="radio" value={skill} id={skill} name="activeSkill" onChange={ this.handleActiveSkillUpdate }/>
         </div>
       );
@@ -37,15 +41,15 @@ class ReadySkills extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
-      <div className="Skills">
-        <h1>{this.props.userName}, what are some of things</h1>
-        <p className="large">You can help with</p>
-        <div className="buttonList">
-          { this.renderSkills() }
+      <div className="ReadySkills">
+        <div className="wrapper ReadySkills__content">
+          <p>I can help with</p>
+          <div className="ReadySkills__buttonList">
+            { this.renderSkills() }
+          </div>
+          <Link to="/ready/time" className="button--bottom">For how long?</Link>
         </div>
-        <Link to="/moment">Find someone to help</Link>
       </div>
     );
   }

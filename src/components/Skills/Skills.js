@@ -8,6 +8,17 @@ import store from '../../reducers';
 import { updateSkills, updateUserId } from '../../actions';
 import './Skills.css';
 
+import camera from '../../assets/cameraskill.png';
+import computer from '../../assets/computer.png';
+import cooking from '../../assets/Cooking.png';
+import driving from '../../assets/driving.png';
+import errands from '../../assets/errands.png';
+import financial from '../../assets/financial.png';
+import handywork from '../../assets/handyman.png';
+import shopping from '../../assets/shopping.png';
+import tutoring from '../../assets/tutoring.png';
+import moving from '../../assets/box.png';
+
 class Skills extends Component {
 
   constructor(props) {
@@ -37,7 +48,7 @@ class Skills extends Component {
     })
       .then((res) => {
         this.props.updateUserId(res.data.id);
-        this.props.router.push('/ready');
+        this.props.router.push('/register/success');
       })
   }
 
@@ -50,7 +61,7 @@ class Skills extends Component {
             <div className="Skills__inputBlock">
               <label htmlFor="cooking">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={cooking} alt=""/>
                 </div>
                 Cooking
               </label>
@@ -59,34 +70,25 @@ class Skills extends Component {
             <div className="Skills__inputBlock">
               <label htmlFor="driving">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={driving} alt=""/>
                 </div>
                 Driving
               </label>
               <input type="checkbox" value="driving" id="driving" onChange={ this.handleSkillUpdate }/>
             </div>
             <div className="Skills__inputBlock">
-              <label htmlFor="yardwork">
+              <label htmlFor="errands">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={errands} alt=""/>
                 </div>
-                Yardwork
+                Errands
               </label>
-              <input type="checkbox" value="yardwork" id="yardwork" onChange={ this.handleSkillUpdate }/>
-            </div>
-            <div className="Skills__inputBlock">
-              <label htmlFor="computer">
-                <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
-                </div>
-                Computer
-              </label>
-              <input type="checkbox" value="computer" id="computer" onChange={ this.handleSkillUpdate }/>
+              <input type="checkbox" value="errands" id="errands" onChange={ this.handleSkillUpdate }/>
             </div>
             <div className="Skills__inputBlock">
               <label htmlFor="financial">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={financial} alt=""/>
                 </div>
                 Financial
               </label>
@@ -95,38 +97,47 @@ class Skills extends Component {
             <div className="Skills__inputBlock">
               <label htmlFor="tutoring">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={tutoring} alt=""/>
                 </div>
                 Tutoring
               </label>
               <input type="checkbox" value="tutoring" id="tutoring" onChange={ this.handleSkillUpdate }/>
             </div>
             <div className="Skills__inputBlock">
-              <label htmlFor="errands">
+              <label htmlFor="shopping">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={shopping} alt=""/>
                 </div>
-                Errands
+                Shopping
               </label>
-              <input type="checkbox" value="errands" id="errands" onChange={ this.handleSkillUpdate }/>
+              <input type="checkbox" value="shopping" id="shopping" onChange={ this.handleSkillUpdate }/>
+            </div>
+            <div className="Skills__inputBlock">
+              <label htmlFor="moving">
+                <div className="Skills__inputimage">
+                  <img src={moving} alt=""/>
+                </div>
+                Moving
+              </label>
+              <input type="checkbox" value="moving" id="moving" onChange={ this.handleSkillUpdate }/>
             </div>
             <div className="Skills__inputBlock">
               <label htmlFor="handywork">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={handywork} alt=""/>
                 </div>
-                Handywork
+                Handyman
               </label>
               <input type="checkbox" value="handywork" id="handywork" onChange={ this.handleSkillUpdate }/>
             </div>
             <div className="Skills__inputBlock">
-              <label htmlFor="pet">
+              <label htmlFor="computer">
                 <div className="Skills__inputimage">
-                  <img src="#" alt=""/>
+                  <img src={computer} alt=""/>
                 </div>
-                Pet
+                Computer
               </label>
-              <input type="checkbox" value="pet" id="pet" onChange={ this.handleSkillUpdate }/>
+              <input type="checkbox" value="computer" id="computer" onChange={ this.handleSkillUpdate }/>
             </div>
           </div>
           <button onClick={ this.handleRegister } className="button--bottom">Register</button>

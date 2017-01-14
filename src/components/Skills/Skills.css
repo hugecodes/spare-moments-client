@@ -1,5 +1,5 @@
 .Skills {
-  background-image: linear-gradient(135deg, #7037CB, #DD5E89);
+  background-color: #597DD3;
 }
 
 .Skills__content {
@@ -50,4 +50,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.Skills__inputimage img {
+  width: 100%;
 }

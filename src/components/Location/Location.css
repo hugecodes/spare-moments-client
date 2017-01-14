@@ -1,24 +1,30 @@
-.App {
+.Location {
+  background-color: #BA2AA4;
+}
+
+.Location__content {
+  padding-top: 4rem;
   text-align: center;
+  min-height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Location__large {
+  font-weight: bold;
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Location__map {
+  position: relative;
+  margin: 25px 0;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Location__mapavatar {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  top: 109px;
+  right: 71px;
 }

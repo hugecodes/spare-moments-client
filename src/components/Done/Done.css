@@ -1,24 +1,44 @@
-.App {
-  text-align: center;
+.Done {
+  background: #E40790;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Done__content {
+  padding-top: 40px;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.Done__wrapper {
+  flex: 1 0 auto;
+  padding: 0 40px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+}
+
+.Done__content textarea {
+  flex: 1 0 auto;
+  background: none;
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 25px;
   color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Avenir Next LT Pro';
+  margin-bottom: 50px;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Done__content textarea::placeholder {
+  color: white;
 }

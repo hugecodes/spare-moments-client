@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import store from '../../reducers';
 import './Location.css';
 
+import MapImage from '../../assets/map.png';
+
 class Location extends Component {
 
   componentWillMount() {
@@ -19,9 +21,15 @@ class Location extends Component {
     } else {
       return (
         <div className="Location">
-          <h1>{ this.props.activeJob.name } / 5 Min away</h1>
-          <img src={this.props.activeJob.image} alt=""/>
-          <Link to="/moment/thanks">Get Started?</Link>
+          <div className="wrapper Location__content">
+            <p>{ this.props.activeJob.title } for</p>
+            <p className="Location__large">{ this.props.activeJob.name }</p>
+            <div className="Location__map">
+              <img src={this.props.activeJob.image}  alt="" className="Location__mapavatar"/>
+              <img src={MapImage} alt=""/>
+            </div>
+            <Link to="/moment/thanks" className="button--bottom">Get Started</Link>
+          </div>
         </div>
       );
     }

@@ -27,19 +27,22 @@ class Time extends Component {
   render() {
     return (
       <div className="Time">
-        <h1>{ this.props.userName }, how can you help?</h1>
-        <p>I can help spare</p>
-        <select onChange={ this.handleTimeChange }>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-        </select>
-        <p>Hours now</p>
-        <Link to="/ready/select">How can you help?</Link>
+        <div className="wrapper Time__content">
+          <p>I can help with</p>
+          <p className="Time__lead">{this.props.activeSkill} for</p>
+          <ul className="Time__wrapper">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+          <p>Hours</p>
+          <Link to="/moment" className="button--bottom">Let's go</Link>
+        </div>
       </div>
     );
   }
@@ -51,6 +54,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 const mapStateToProps = function(store) {
   return {
+    activeSkill: store.moment.user.activeSkill,
     userName: store.moment.user.userName,
     moments: store.moment.moments
   };

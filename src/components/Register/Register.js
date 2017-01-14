@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import axios from 'axios';
 import Dropzone from 'react-dropzone';
 import store from '../../reducers';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/camera-icon.png';
 import { updateName, updateProfilePic } from '../../actions';
 import './Register.css';
 

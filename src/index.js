@@ -14,6 +14,7 @@ import Thanks from './components/Thanks/Thanks.js';
 import Moment from './components/Moment/Moment.js';
 import Done from './components/Done/Done.js';
 import NotFound from './components/NotFound/NotFound.js';
+import Success from './components/Success/Success.js';
 
 import spareMomentsApp from './reducers';
 
@@ -30,10 +31,11 @@ ReactDOM.render(
         <Route path="register">
           <IndexRoute component={ Register } />
           <Route path="skills" component={ Skills }/>
+          <Route path="success" component={ Success }/>
         </Route>
         <Route path="ready">
-          <IndexRoute component={ Time } />
-          <Route path="select" component={ ReadySkills }/>
+          <IndexRoute component={ ReadySkills } />
+          <Route path="time" component={ Time }/>
         </Route>
         <Route path="moment">
           <IndexRoute component={ Moment } />

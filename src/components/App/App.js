@@ -10,6 +10,7 @@ import './App.css';
 class App extends Component {
 
   componentWillMount() {
+    document.body.classList.add('body--App');
     axios.get('http://localhost:8080/api/moments')
       .then((res) => {
         this.props.getMoments(res.data);

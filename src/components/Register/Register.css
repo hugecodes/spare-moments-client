@@ -1,5 +1,5 @@
 .Register {
-  background-image: linear-gradient(135deg, #7037CB, #DD5E89);
+  background-color: #458EDD;
 }
 
 .Register__content {
@@ -21,7 +21,7 @@
 .Register__imagedrop {
   border: none;
   border-radius: 50%;
-  background: white;
+  background: #8458BF;
   width: 26.8rem;
   height: 26.8rem;
   margin: 0 auto;

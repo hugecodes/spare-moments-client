@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import './Thanks.css';
 
+import Note from '../../assets/notes.png';
+
 class Thanks extends Component {
 
   componentWillMount() {
@@ -13,28 +15,35 @@ class Thanks extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="Thanks">
-        <p>All done</p>
-        <h1>Thank you</h1>
-        <div className="scrollArea">
-          <div className="scrollComment">
-            <img src="#" alt=""/>
-            Learned new stuff
+        <div className="wrapper Thanks__content">
+          <div className="Thanks__copy">
+            <p className="Thanks__large">Send a thank you</p>
+            <p>What stood out with { this.props.activeJob.name }?</p>
           </div>
-          <div className="scrollComment">
-            <img src="#" alt=""/>
-            Learned new stuff
+          <div className="Thanks__scrollArea">
+            <div className="Thanks__scrollComment">
+              <img src="#" alt=""/>
+              Punctuality
+            </div>
+            <div className="Thanks__scrollComment">
+              <img src="#" alt=""/>
+              Friendly
+            </div>
+            <div className="Thanks__scrollComment">
+              <img src="#" alt=""/>
+              Learned new stuff
+            </div>
           </div>
-          <div className="scrollComment">
-            <img src="#" alt=""/>
-            Learned new stuff
-          </div>
-        </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="comments">
 
-        </textarea>
-        <Link to="/moment/done">How can you help?</Link>
+          <Link to="/moment/done" className="Thanks__note">
+            <img src={Note} alt=""/>
+            Add a note
+          </Link>
+          <Link to="/moment/done" className="button--bottom">Thank { this.props.activeJob.name }</Link>
+        </div>
       </div>
     );
   }
@@ -42,7 +51,8 @@ class Thanks extends Component {
 
 const mapStateToProps = function(store) {
   return {
-    moments: store.moment.moments
+    moments: store.moment.moments,
+    activeJob: store.moment.user.activeJob
   };
 }
 

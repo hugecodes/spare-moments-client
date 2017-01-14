@@ -40,16 +40,17 @@ class Moment extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Moment">
       { this.state.moment !== null
         ?
-        <div>
+        <div className="wrapper Moment__content">
           <p>{ this.state.moment.name } needs help with</p>
-          <p>{ this.state.moment.title }</p>
-          <p>{ this.state.moment.description }</p>
-          <p>Location</p>
-          <p>5 min</p>
-          <button onClick={ this.handleNavigate } >Help { this.state.moment.name }</button>
+          <p className="Moment__large">{ this.state.moment.title }</p>
+          <p className="Moment__about">{ this.state.moment.name }</p>
+          <p className="Moment__copy">{ this.state.moment.description }</p>
+          <p className="Moment__about">Proximity</p>
+          <p className="Moment__light">5 min</p>
+          <button onClick={ this.handleNavigate } className="button--bottom">Help { this.state.moment.name }</button>
         </div>
         :
         null
