@@ -18,24 +18,46 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Spare Moments</h1>
-        <p>Have a moment to spare? Donating just an hour of your time a week can make a huge impact on someone’s life.</p>
-        <ul>
-          <li>
-            <img src="http://www.radfaces.com/images/avatars/mechagodzilla.jpg" alt=""/>
-            <p>Mark did this cool thing</p>
-          </li>
-          <li>
-            <img src="http://www.radfaces.com/images/avatars/mechagodzilla.jpg" alt=""/>
-            <p>Mark did this cool thing</p>
-          </li>
-          <li>
-            <img src="http://www.radfaces.com/images/avatars/mechagodzilla.jpg" alt=""/>
-            <p>Mark did this cool thing</p>
-          </li>
-        </ul>
-        <Link to="/register">How can you help?</Link>
+      <div className={classNames('App')}>
+        <div className="wrapper">
+          <h1 className="App__logo">
+            <span className="App__logo-first">Spare</span>
+            <span className="App__logo-second">M_ments</span>
+          </h1>
+          <div className="App__lead">
+            <p className="App__leadcopy">Donating an hour of your time can have a huge impact on someone else.</p>
+          </div>
+          <ul className="App__slider">
+            <li className="App__slider-card">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/peterme/128.jpg"
+              className="App__slider-image"
+              alt=""/>
+              <div className="App__slider-copy">
+                <p>Thursday</p>
+                <p>Mark C cooked for Mary L.</p>
+              </div>
+            </li>
+            <li className="App__slider-card">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+              className="App__slider-image"
+              alt=""/>
+              <div className="App__slider-copy">
+                <p>Thursday</p>
+                <p>Mark did this cool thing</p>
+              </div>
+            </li>
+            <li className="App__slider-card">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/glif/128.jpg"
+              className="App__slider-image"
+              alt=""/>
+              <div className="App__slider-copy">
+                <p>Thursday</p>
+                <p>Mark did this cool thing</p>
+              </div>
+            </li>
+          </ul>
+          <Link to="/register" className={classNames('button--bottom')}>How can you help?</Link>
+        </div>
       </div>
     );
   };

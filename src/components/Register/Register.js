@@ -38,13 +38,28 @@ class Register extends Component {
     const image = this.props.profilePic ? this.props.profilePic : logo;
     return (
       <div className="Register">
-        <h1>Register</h1>
-        <input type="text" placeholder="Your name" value={ this.props.value } onChange={ this.handleNameInputChange }/>
-        <Dropzone onDrop={ this.handleImageDrop }>
-          <img src={ image } />
+        <div className="wrapper">
+          <div className="Register__content">
+            <div className="Register__copy">
+              <p>Your name is</p>
+              <input
+                type="text"
+                placeholder="Your name"
+                value={ this.props.value }
+                onChange={ this.handleNameInputChange }
+                className="input__text Register__input"
+              />
+            </div>
+            <Dropzone
+              onDrop={ this.handleImageDrop }
+              className="Register__imagedrop"
+              >
+              <img src={ image } />
 
-        </Dropzone>
-        <Link to="/register/skills">How can you help?</Link>
+            </Dropzone>
+            <Link to="/register/skills" className="button--bottom">How can you help?</Link>
+          </div>
+        </div>
       </div>
     );
   }

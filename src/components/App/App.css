@@ -1,24 +1,74 @@
 .App {
-  text-align: center;
+  background-image: linear-gradient(135deg, #7037CB, #DD5E89);
+  padding-top: 14rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.App__logo {
+  font-weight: bold;
   color: white;
+  font-size: 9rem;
+  margin: 0;
 }
 
-.App-intro {
-  font-size: large;
+.App__logo-first, .App__logo-second {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App__logo-first {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.App__logo-second {
+  text-align: right;
+}
+
+.App__lead {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.App__leadcopy {
+  font-size: 2.6rem;
+  color: white;
+  max-width: 389px;
+  text-align: left;
+  padding-right: 50px;
+  line-height: 1.6;
+}
+
+.App__slider {
+  margin: 17rem 0 9.1rem 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+}
+
+.App__slider-card {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+  flex: 1 0 auto;
+  margin-left: 50px;
+}
+
+.App__slider-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+}
+
+.App__slider-copy {
+  color: white;
+  text-align: left;
+  font-weight: 500;
+}
+
+.App__slider-copy p {
+  line-height: 1.5;
+  margin: 0;
 }
