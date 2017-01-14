@@ -4,8 +4,12 @@ import classNames from 'classnames';
 import axios from 'axios';
 import { getMoments } from '../../actions';
 import store from '../../reducers';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 import './App.css';
+
+import Logo from '../../assets/logo.svg';
+import Soup from '../../assets/soup.png';
+import Car from '../../assets/car.png';
 
 class App extends Component {
 
@@ -20,16 +24,16 @@ class App extends Component {
     return (
       <div className={classNames('App')}>
         <div className="wrapper">
-          <h1 className="App__logo">
-            <span className="App__logo-first">Spare</span>
-            <span className="App__logo-second">M_ments</span>
-          </h1>
           <div className="App__lead">
             <p className="App__leadcopy">Donating an hour of your time can have a huge impact on someone else.</p>
           </div>
+          <h1 className="App__logo">
+            <img src={Logo} alt=""/>
+          </h1>
+
           <ul className="App__slider">
             <li className="App__slider-card">
-              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/peterme/128.jpg"
+              <img src={Soup}
               className="App__slider-image"
               alt=""/>
               <div className="App__slider-copy">
@@ -38,7 +42,7 @@ class App extends Component {
               </div>
             </li>
             <li className="App__slider-card">
-              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+              <img src={Car}
               className="App__slider-image"
               alt=""/>
               <div className="App__slider-copy">
@@ -47,7 +51,7 @@ class App extends Component {
               </div>
             </li>
             <li className="App__slider-card">
-              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/glif/128.jpg"
+              <img src={Soup}
               className="App__slider-image"
               alt=""/>
               <div className="App__slider-copy">

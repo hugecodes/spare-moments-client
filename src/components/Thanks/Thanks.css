@@ -2,6 +2,10 @@
   background: #D41397;
 }
 
+.Thanks .button--bottom {
+  color: #D41397;
+}
+
 .Thanks__content {
   padding-top: 40px;
   min-height: 100vh;

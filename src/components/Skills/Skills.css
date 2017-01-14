@@ -2,6 +2,10 @@
   background-color: #597DD3;
 }
 
+.Skills .button--bottom {
+  color: #597DD3;
+}
+
 .Skills__content {
   padding-top: 4rem;
   display: flex;
@@ -38,7 +42,8 @@
 
 .Skills__inputBlock label {
   display: block;
-
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .Skills__inputimage {

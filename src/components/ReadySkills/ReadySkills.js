@@ -15,11 +15,11 @@ class ReadySkills extends Component {
     this.handleActiveSkillUpdate = this.handleActiveSkillUpdate.bind(this);
   }
 
-  // componentWillMount() {
-  //   if (this.props.moments.length === 0) {
-  //     this.props.router.push('/');
-  //   }
-  // }
+  componentWillMount() {
+    if (this.props.moments.length === 0) {
+      this.props.router.push('/');
+    }
+  }
 
   handleActiveSkillUpdate(e) {
     this.props.updateActiveSkill(e.target.value);

@@ -23,8 +23,10 @@ class Moment extends Component {
       this.props.router.push('/');
     } else {
       let data = this.props.moments.filter((val) => {
-        return val.skill === activeSkill;
+        return val.skill === this.props.activeSkill;
       });
+
+      console.log(data)
 
       this.setState({
         moment: data[Math.floor(Math.random() * data.length)]
@@ -44,12 +46,14 @@ class Moment extends Component {
       { this.state.moment !== null
         ?
         <div className="wrapper Moment__content">
-          <p>{ this.state.moment.name } needs help with</p>
-          <p className="Moment__large">{ this.state.moment.title }</p>
-          <p className="Moment__about">{ this.state.moment.name }</p>
-          <p className="Moment__copy">{ this.state.moment.description }</p>
-          <p className="Moment__about">Proximity</p>
-          <p className="Moment__light">5 min</p>
+          <div className="Moment__wrapper">
+            <p>{ this.state.moment.name } needs help with</p>
+            <p className="Moment__large">{ this.state.moment.title }</p>
+            <p className="Moment__about">{ this.state.moment.name }</p>
+            <p className="Moment__copy">{ this.state.moment.description }</p>
+            <p className="Moment__about">Proximity</p>
+            <p className="Moment__light">5 min</p>
+          </div>
           <button onClick={ this.handleNavigate } className="button--bottom">Help { this.state.moment.name }</button>
         </div>
         :

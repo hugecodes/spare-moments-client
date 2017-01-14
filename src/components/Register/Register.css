@@ -2,6 +2,10 @@
   background-color: #458EDD;
 }
 
+.Register .button--bottom {
+  color: #458EDD;
+}
+
 .Register__content {
   padding-top: 4rem;
   display: flex;
@@ -18,10 +22,14 @@
   font-size: 43rem;
 }
 
+.Register__input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .Register__imagedrop {
   border: none;
   border-radius: 50%;
-  background: #8458BF;
+  background: #FF9B44;
   width: 26.8rem;
   height: 26.8rem;
   margin: 0 auto;

@@ -2,6 +2,10 @@
   background-color: #9A46B4;
 }
 
+.Time .button--bottom {
+  color: #9A46B4;
+}
+
 .Time__content {
   padding-top: 11rem;
   text-align: center;

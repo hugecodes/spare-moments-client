@@ -2,6 +2,10 @@
   background: #B331A8;
 }
 
+.Moment .button--bottom {
+  color: #B331A8;
+}
+
 .Moment__content {
   text-align: left;
   padding-top: 4rem;

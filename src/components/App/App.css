@@ -3,28 +3,17 @@
 }
 
 .App {
-  padding-top: 14rem;
+  /*padding-top: 3rem;*/
+}
+
+.App .button--bottom {
+  color: #2CA3E9;
 }
 
 .App__logo {
-  font-weight: bold;
-  color: white;
-  font-size: 9rem;
-  margin: 0;
+  text-align: center;
 }
 
-.App__logo-first, .App__logo-second {
-  display: block;
-}
-
-.App__logo-first {
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-.App__logo-second {
-  text-align: right;
-}
 
 .App__lead {
   display: flex;
@@ -34,14 +23,13 @@
 .App__leadcopy {
   font-size: 2.6rem;
   color: white;
-  max-width: 389px;
-  text-align: left;
-  padding-right: 50px;
+  text-align: center;
   line-height: 1.6;
+  padding: 0 30px;
 }
 
 .App__slider {
-  margin: 17rem 0 9.1rem 0;
+  margin: 9rem 0 5rem 0;
   padding: 0;
   list-style: none;
   overflow-x: scroll;
@@ -55,6 +43,7 @@
   -ms-align-items: center;
   align-items: center;
   flex: 1 0 auto;
+  max-width: 300px;
   margin-left: 50px;
 }
 
@@ -68,7 +57,11 @@
 .App__slider-copy {
   color: white;
   text-align: left;
-  font-weight: 500;
+}
+
+.App__slider-copy p {
+    font-weight: 500;
+    font-size: 2rem;
 }
 
 .App__slider-copy p {

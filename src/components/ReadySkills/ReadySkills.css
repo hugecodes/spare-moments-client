@@ -2,6 +2,10 @@
   background-color: #8259BF;
 }
 
+.ReadySkills .button--bottom {
+  color: #8259BF;
+}
+
 .ReadySkills__content {
   padding-top: 11rem;
   text-align: center;

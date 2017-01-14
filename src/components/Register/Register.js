@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import axios from 'axios';
 import Dropzone from 'react-dropzone';
 import store from '../../reducers';
-import logo from '../../assets/camera-icon.png';
+import camera from '../../assets/camera-icon.png';
 import { updateName, updateProfilePic } from '../../actions';
 import './Register.css';
 
@@ -35,7 +35,8 @@ class Register extends Component {
   }
 
   render() {
-    const image = this.props.profilePic ? this.props.profilePic : logo;
+    const image = this.props.profilePic ? this.props.profilePic : camera;
+    const disabledLink = this.props.profilePic.length && this.props.userName.length ? '' : 'disabled-link'
     return (
       <div className="Register">
         <div className="wrapper">
@@ -57,7 +58,7 @@ class Register extends Component {
               <img src={ image } />
 
             </Dropzone>
-            <Link to="/register/skills" className="button--bottom">How can you help?</Link>
+            <Link to="/register/skills" className={classNames("button--bottom", disabledLink)}>How can you help?</Link>
           </div>
         </div>
       </div>

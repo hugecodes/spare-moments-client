@@ -2,6 +2,10 @@
   background-color: #BA2AA4;
 }
 
+.Location .button--bottom {
+  color: #BA2AA4;
+}
+
 .Location__content {
   padding-top: 4rem;
   text-align: center;
